@@ -1,0 +1,8 @@
+ALTER TABLE `requirement_candidate_screening` ADD `updated_at` DATETIME NULL AFTER `created_by`, ADD `updated_by` INT NULL AFTER `updated_at`;
+
+ALTER TABLE `requirement_screening_levels` ADD `created_by` INT NULL AFTER `status`, ADD `created_at` DATETIME NULL AFTER `created_by`, ADD `updated_by` INT NULL AFTER `created_at`, ADD `updated_at` DATETIME NULL AFTER `updated_by`;
+
+ALTER TABLE `requirement_candidate_screening` ADD `reject_feedback` VARCHAR(255) NULL AFTER `is_favourite`;
+
+
+ALTER TABLE `blogs` ADD `meta_title` VARCHAR(255) NOT NULL AFTER `blog_date`, ADD `meta_keywords` VARCHAR(255) NULL AFTER `meta_title`, ADD `meta_description` VARCHAR(500) NOT NULL AFTER `meta_keywords`;
